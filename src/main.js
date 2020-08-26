@@ -11,7 +11,7 @@ new Vue({
          },
      //用完把监听事件取消掉
          unbind(el,info){
-         el.addEventListener(info.arg,info.value)
+         el.removeEventListener(info.arg,info.value)
        }
      }
  },
