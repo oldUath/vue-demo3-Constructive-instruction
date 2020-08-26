@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1  v-y>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -34,6 +34,16 @@
 <script>
 export default {
   name: 'HelloWorld',
+  //局部指令
+  directives:{
+    'y':{
+      inserted(el){
+        el.addEventListener('click',()=>{
+          console.log("这是yyyy")
+        })
+      }
+    }
+  },
   props: {
     msg: String
   }
